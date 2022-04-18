@@ -13,7 +13,7 @@ function controls(scene: Phaser.Scene, player: Phaser.Physics.Arcade.Sprite) {
     !controls.down.isDown &&
     !controls.left.isDown &&
     !controls.right.isDown &&
-    !controls.space.isDown
+    !(player.anims.currentAnim?.key === 'attack')
   ) {
     player.anims.play('idle', true)
   }
